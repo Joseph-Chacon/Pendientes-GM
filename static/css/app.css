@@ -1,0 +1,141 @@
+:root {
+  --gm-red: #e30613;
+  --gm-yellow: #ffde00;
+  --gm-ink: #242424;
+  --gm-soft: #f7f7f7;
+}
+body {
+  background: var(--gm-soft);
+  color: var(--gm-ink);
+  min-height: 100vh;
+}
+.app-nav {
+  background: var(--gm-red);
+}
+.brand-logo {
+  width: 42px;
+  height: 28px;
+  object-fit: contain;
+  background: white;
+  border-radius: 3px;
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1rem;
+}
+.btn-brand {
+  --bs-btn-color: white;
+  --bs-btn-bg: var(--gm-red);
+  --bs-btn-border-color: var(--gm-red);
+  --bs-btn-hover-color: white;
+  --bs-btn-hover-bg: #bd0010;
+  --bs-btn-hover-border-color: #bd0010;
+}
+.btn-warning {
+  color: #3b3100;
+  font-weight: 600;
+}
+.summary-card {
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 110px;
+}
+.summary-card span {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+.summary-card strong {
+  font-size: 3rem;
+  line-height: 1;
+}
+.summary-open {
+  background: var(--gm-red);
+}
+.summary-done {
+  background: #198754;
+}
+.list-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: inherit;
+  text-decoration: none;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+  gap: 1rem;
+}
+.list-row:last-child {
+  border: 0;
+}
+.list-row:hover {
+  color: var(--gm-red);
+}
+.list-row span:not(.badge),
+.list-row small {
+  display: block;
+}
+.list-row small {
+  color: #6c757d;
+}
+.count-pill {
+  min-width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background: #fff1b8;
+  color: #695600;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+.page-narrow {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.back-link {
+  color: var(--gm-red);
+  text-decoration: none;
+  font-weight: 600;
+}
+.detail-label {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6c757d;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+.whitespace-preline {
+  white-space: pre-line;
+}
+.priority {
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.priority-alta {
+  color: #b02a37;
+}
+.priority-media {
+  color: #8a6d00;
+}
+.priority-baja {
+  color: #39734a;
+}
+.clickable-row {
+  cursor: pointer;
+}
+@media (max-width: 575.98px) {
+  .navbar-brand span {
+    font-size: 0.8rem;
+  }
+  .summary-card {
+    min-height: 92px;
+  }
+  .summary-card strong {
+    font-size: 2.25rem;
+  }
+}

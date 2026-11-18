@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+{% block title %}Resolver {{ pendiente.codigo }}{% endblock %}
+{% block content %}
+    <div class="page-narrow"><a class="back-link" href="{% url 'pendientes:detalle' pendiente.pk %}">← Volver al pendiente</a><h1 class="h2 mt-3">Resolver pendiente</h1><p class="text-secondary">{{ pendiente.codigo }} · {{ pendiente.titulo }}</p><form method="post" class="card border-0 shadow-sm">{% csrf_token %}<div class="card-body p-md-4"><div class="alert alert-warning small">Al guardar, el pendiente quedará como resuelto y se registrará automáticamente la fecha y hora.</div>{% for field in form %}<div class="mb-3"><label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>{{ field }}{% for error in field.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}</div>{% endfor %}<button class="btn btn-success" type="submit">Confirmar resolución</button><a class="btn btn-outline-secondary ms-1" href="{% url 'pendientes:detalle' pendiente.pk %}">Cancelar</a></div></form></div>
+{% endblock %}

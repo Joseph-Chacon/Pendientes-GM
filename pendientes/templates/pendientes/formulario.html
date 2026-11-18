@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+{% block title %}Registrar pendiente{% endblock %}
+{% block content %}
+    <div class="page-narrow"><a class="back-link" href="{% url 'pendientes:lista' %}">← Volver a pendientes</a><h1 class="h2 mt-3">Registrar pendiente</h1><p class="text-secondary">La fecha y hora de registro se guardarán automáticamente.</p><form method="post" class="card border-0 shadow-sm">{% csrf_token %}<div class="card-body p-md-4">{% if form.non_field_errors %}<div class="alert alert-danger">{{ form.non_field_errors }}</div>{% endif %}{% for field in form %}<div class="mb-3"><label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>{{ field }}{% for error in field.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}</div>{% endfor %}<div class="d-flex gap-2 mt-4"><button class="btn btn-brand" type="submit">Guardar pendiente</button><a class="btn btn-outline-secondary" href="{% url 'pendientes:lista' %}">Cancelar</a></div></div></form></div>
+{% endblock %}
